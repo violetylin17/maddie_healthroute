@@ -1,0 +1,137 @@
+/* style.css */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background */
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Align items */
+    align-items: center;
+    background-color: #fff; /* Slightly darker header */
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.time {
+    font-weight: bold;
+}
+
+.user-info {
+    display: flex;
+    align-items: flex-start; /* 讓頭像和文字對齊 */
+  }
+  
+  .user-avatar {
+    width: 50px; /* 調整頭像大小 */
+    height: 50px; /* 調整頭像大小 */
+    margin-right: 10px; /* 頭像和文字間的間距 */
+  }
+  
+  .user-details {
+    display: flex;
+    align-items: center; /* 讓文字垂直置中 */
+  }
+
+/* ... other styles ... */
+
+.icons {
+    display: flex;
+    gap: 10px; /* Space out the icons */
+}
+
+.icons img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+main {
+  display: flex;
+  flex-direction: column; /* Stack sections vertically */
+}
+
+.appointments, .doctors {
+    margin-bottom: 20px;
+}
+
+.appointment-card {
+    background-color: #dc3545; /* Red for appointments */
+    color: white;
+    display: flex; /* Enable flexbox for centering */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center text within elements (if needed) */
+}
+
+.appointment-card > * { /* Target direct children of the card */
+    margin: 5px 0; /* Add some spacing between elements */
+}
+
+/* Optional: If you want the date and time on the same line, */
+/* you can adjust the HTML and remove the margin on the date-time element */
+.date-time {
+    margin: 0; /* Remove default margin */
+}
+
+.doctor-card {
+    display: flex; /* Arrange doctor card items horizontally */
+    align-items: center; /* Vertically align items */
+    gap: 10px; /* Space between items */
+}
+
+.doctor-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Make avatar round */
+}
+
+.doctor-details {
+    flex-grow: 1; /* Allow details to take up available space */
+}
+
+.doctor-name {
+    font-weight: bold;
+    margin: 0; /* Remove default margins */
+}
+
+.doctor-info, .availability {
+    margin: 5px 0;
+}
+
+.heart {
+  cursor: pointer;
+  font-size: 1.2em; /* Make heart a bit larger */
+}
+
+button {
+    background-color: #007bff; /* Blue button */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.doctors-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Responsive adjustments (example) */
+@media (max-width: 768px) {
+  .doctor-card {
+    flex-direction: column; /* Stack doctor card items vertically */
+    align-items: flex-start; /* Align to the left */
+  }
+}
